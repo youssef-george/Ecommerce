@@ -1,38 +1,122 @@
-.App {
+/* تصميم الصفحة العامة */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;  /* استخدام خط من Google Fonts */
+  background-color: #f0f0f0;  /* خلفية بلون رمادي فاتح */
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  padding: 20px;
+}
+
+/* تصميم الحاوية العامة */
+.container {
+  display: flex;
+  flex-direction: column; /* لجعل السلة تحت المنتجات */
+  align-items: center;
+  padding: 20px;
+}
+
+/* تصميم قائمة المنتجات لعرض المنتجات جنبًا إلى جنب */
+.product-list {
+  display: flex;
+  flex-wrap: wrap; /* للتأكد من أن المنتجات ستلتف إلى السطر التالي عند امتلاء السطر */
+  justify-content: center; /* لجعل المنتجات في المنتصف */
+  gap: 20px; /* مسافة بين المنتجات */
+  margin-bottom: 40px; /* مسافة بين المنتجات وسلة التسوق */
+}
+
+/* تصميم بطاقة المنتج */
+.product-card {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 200px; /* عرض ثابت لكل بطاقة لتكون متساوية */
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card h3 {
+  color: #333;
+}
+
+.product-card p {
+  color: #555;
+}
+
+.product-card button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+  background-color: #218838;
+}
+
+/* تصميم سلة التسوق */
+.cart-container {
+  width: 100%;
+  max-width: 800px; /* تحديد عرض للسلة ليكون ثابتًا ومناسبًا */
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item {
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.cart-item h3 {
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.cart-item p {
+  color: #555;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.cart-item button {
+  background-color: #dc3545;
   color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.cart-item button:hover {
+  background-color: #c82333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* إضافة تصميم لأزرار الإضافة والإزالة */
+.cart-item button:nth-child(1) {
+  background-color: #28a745;
+  margin-right: 5px;
+}
+
+.cart-item button:nth-child(1):hover {
+  background-color: #218838;
+}
+
+h2 {
+  color: #333;
 }
