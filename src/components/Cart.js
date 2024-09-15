@@ -11,7 +11,7 @@ function Cart({ cartItems, addToCart, removeFromCart }) {
         <div key={item.id} className="cart-item">
           <h3>{item.name}</h3>
           <p>
-            {item.qty} x ${item.price}
+            {item.qty} x  {item.price} EGP
           </p>
           <div>
             <button onClick={() => addToCart(item)}>+</button>
@@ -21,7 +21,7 @@ function Cart({ cartItems, addToCart, removeFromCart }) {
       ))}
       {cartItems.length !== 0 && (
         <div>
-          <h3>Total Price: ${totalPrice}</h3>
+          <h3>Total Price:{totalPrice} EGP </h3>
         </div>
       )}
     </div>

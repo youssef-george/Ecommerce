@@ -1,3 +1,18 @@
+# E-Commerce Application
+
+This is a front-end for an E-Commerce web application built with React.js. The app provides users with a smooth shopping experience.
+
+## Features:
+- Home page showcasing various products.
+- Product listing page with details for each product.
+- Add products to the shopping cart.
+- View and update items in the shopping cart.
+- Checkout process for purchasing items.
+- Responsive design for seamless experience on all devices.
+
+This project demonstrates essential features of an E-Commerce platform, focusing on providing a clean and easy-to-use interface for users.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
